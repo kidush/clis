@@ -20,7 +20,7 @@ sub count_words {
     open(my $fh, '<', $file) or die "Could not open file '$file': $!";
     my $word_count = 0;
     while (<$fh>) {
-        $word_count += scalar split /\s+/;
+        $word_count += scalar split ' ';
     }
     close($fh);
     return $word_count;
